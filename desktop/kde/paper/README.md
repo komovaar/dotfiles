@@ -71,7 +71,7 @@ Fedora's `/usr/lib64/qt6/bin/qdbus`.
 
 ## Classic cursor
 
-`python3 desktop/kde/paper/apply-cursor.py` downloads the pinned v1.0 DMZ Black
+`python3 desktop/kde/paper/apply-cursor.py` downloads the pinned v1.0 DMZ White
 cursor archive from https://github.com/rhizoome/dmz-cursors and activates it at
 24 px using `plasma-apply-cursortheme`, also matching existing GTK settings.
 An optional argument supplies an already-downloaded archive. Existing settings
