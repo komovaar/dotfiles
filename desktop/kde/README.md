@@ -1,8 +1,8 @@
 # KDE desktop backup
 
 This snapshot stores KDE appearance, fonts, icons, shortcuts, panels, widgets,
-GTK appearance settings, and wallpaper images. Neovim configuration remains at
-the repository root. Requires Python 3; font discovery uses Fontconfig.
+GTK appearance settings, and wallpaper images.
+Requires Python 3; font discovery uses Fontconfig.
 
 Desktop text uses Inter 4.1, bundled with its license from
 https://rsms.me/inter/download/. To apply just this font to the original setup

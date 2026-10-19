@@ -17,9 +17,9 @@ escaped_theme=${target_theme//\\/\\\\}
 escaped_theme=${escaped_theme//\"/\\\"}
 source_line="source-file \"$escaped_theme\""
 if ! grep -Fqx -- "$source_line" "$target_config" 2>/dev/null; then
-  printf '\n# Ink appearance from the config repository\n%s\n' "$source_line" >> "$target_config"
+  printf '\n# Paper appearance from the dotfiles repository\n%s\n' "$source_line" >> "$target_config"
 fi
 if tmux list-sessions >/dev/null 2>&1; then
   tmux source-file "$target_theme"
 fi
-printf 'Installed Ink theme. Previous files: %s\n' "$backup_dir"
+printf 'Installed Paper theme. Previous files: %s\n' "$backup_dir"

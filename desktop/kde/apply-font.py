@@ -37,7 +37,11 @@ for path in paths:
     if path.name == 'kdeglobals':
         updated = ''.join(line if line.startswith('fixed=') else line.replace('JetBrainsMono Nerd Font', 'Inter') for line in original.splitlines(keepends=True))
     elif path.name == '99-jetbrains-mono.conf':
-        updated = ''.join(line if '<family>monospace</family>' in line else line.replace('JetBrains Mono', 'Inter') for line in original.splitlines(keepends=True))
+        # Keep generic document fonts at the system defaults (including Firefox).
+        updated = ''.join(line.replace('JetBrains Mono', 'Inter')
+                          for line in original.splitlines(keepends=True)
+                          if not any(f'<family>{family}</family>' in line
+                                     for family in ('serif', 'sans-serif', 'monospace')))
     else:
         updated = original.replace('JetBrainsMono Nerd Font', 'Inter')
     if original != updated:

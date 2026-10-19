@@ -1,6 +1,6 @@
-# Ink for tmux
+# Paper for tmux
 
-A compact charcoal theme matching the Neovim Ink palette in this repository.
+A compact grayscale theme matching the KDE and Konsole Paper palette.
 Requires tmux 3.3 or newer. Uses plain text, with no plugins or Nerd Font required.
 The terminal app controls the font family and size; this theme controls colors
 and layout. Prefix, mouse behavior, pane shortcuts, and window numbering stay
@@ -9,6 +9,8 @@ as configured before installation.
 ```sh
 ./tmux/install.sh
 ```
+
+The `ink.conf` filename is retained for existing installations.
 
 The installer copies the theme to `~/.config/tmux/ink.conf` (or
 `$XDG_CONFIG_HOME/tmux/ink.conf`), adds a source line to your existing tmux config,
